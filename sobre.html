@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sobre — Conexinfinity · A operação por trás dos sistemas</title>
+<meta name="description" content="Não somos uma agência. Somos engenharia de operação — construindo sistemas para empresas que escolhem crescer com método." />
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var t=localStorage.getItem("conex_theme")||"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="brand-symbol" viewBox="0 0 8704.52 4154.8">
+    <path fill="currentColor" d="M4808.49 2105.46c55.19,-86.41 131.56,-138.38 199.28,-206.33 367,-368.31 959.49,-1099.21 1431.62,-1188.49 880.87,-166.59 1586.46,517.38 1607.87,1314.55 22.45,835.53 -702.04,1580.95 -1581.52,1417.76 -462.54,-85.83 -668.48,-369.57 -906.26,-598.19l-750.99 -739.3zm-467.32 490.51c214.33,120.16 932.88,943.4 1273.62,1198.25 993.02,742.75 2275.86,240.86 2783.37,-647.48 1069.54,-1872.11 -869.91,-3855.16 -2606.94,-2897.77 -232.74,128.27 -411.93,362.29 -646.8,570.07 -76.96,68.09 -127.31,148.52 -202.03,221.02l-1651.29 1629.02c-265.91,262.85 -524.18,649.09 -918.04,748.21 -1051.16,264.55 -1769.73,-609.78 -1695.61,-1488.51 57.86,-686.09 561.13,-1199.59 1205.09,-1240.32 347.62,-21.99 427.68,60.93 685.73,143.07 115.74,-151.38 331.84,-301.69 428.71,-471.9 -684.45,-625.38 -1935.67,-298.99 -2407.84,242.18 -262.15,300.46 -469.96,575.36 -557.7,1109.28 -314.95,1916.52 1811.94,3041.55 3012.19,2111.69l858.79 -807.17c124.21,-119.56 302.02,-319.93 438.75,-419.66z"/>
+    <circle class="dot" cx="3673.59" cy="1421.75" r="309.28" fill="#4d5cff"/>
+  </symbol>
+</svg>
+
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="loader" id="loader">
+  <svg class="loader-mark" viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+  <div class="loader-text">Carregando perfil</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="statusbar">
+  <div><span class="dot"></span>CONEXINFINITY.OS · IDENTIDADE</div>
+  <div class="right"><span>ARACAJU · SE</span><span id="clock">--:--:--</span></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg><span class="brand-word"><span class="b">Conex</span><span class="i">infinity</span></span></a>
+    <ul>
+      <li><a class="link" href="index.html">Início</a></li>
+      <li><a class="link" href="servicos.html">Serviços</a></li>
+      <li><a class="link active" href="sobre.html">Sobre</a></li>
+      <li><a class="link" href="blog.html">Blog</a></li>
+      <li><a class="link" href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Mudar para modo claro" title="Modo claro/escuro">
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6L4 4M20 20l-1.6-1.6M5.6 18.4L4 20M20 4l-1.6 1.6"/></svg>
+      </button>
+      <a href="contato.html" class="cta">Orçamento →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="section hero-inner">
+  <div class="wrap reveal-stagger">
+    <span class="eyebrow"><span class="section-num">// PERFIL ·</span> SOBRE A CONEXINFINITY</span>
+    <h1 class="h1">Não somos uma agência. Somos <span class="accent">engenharia de operação.</span></h1>
+    <p class="lead">A maioria das empresas trata sistemas como custo. A gente trata como infraestrutura. Cada projeto tem código que dura, decisão com dado por trás e resultado com nome e número — não promessa.</p>
+  </div>
+</header>
+
+<!-- MANIFESTO -->
+<section class="section" style="padding-top:60px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 01 ·</span> MANIFESTO</span>
+        <h2 class="h2" style="margin-top:14px">A Conexinfinity nasceu pra<br>uma pergunta simples.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">"Por que tanta empresa cresce reféns de planilha, WhatsApp e cabeça da equipe — quando software sob medida resolve isso?" A resposta virou nosso negócio.</p>
+    </div>
+
+    <p class="pain-quote reveal" style="margin-top:0;max-width:42ch">
+      Democratizar a inteligência digital — pra qualquer empresa, em qualquer porte, em <span>qualquer estágio.</span>
+    </p>
+  </div>
+</section>
+
+<!-- MISSION / VISION / VALUES -->
+<section class="section" style="padding-top:80px;padding-bottom:80px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 02 ·</span> PRINCÍPIOS OPERACIONAIS</span>
+        <h2 class="h2" style="margin-top:14px">Quatro pilares que sustentam<br>tudo o que a gente faz.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">Não são palavras de quadro decorativo. São critérios que filtram cliente, decisão de produto e o tipo de problema que aceitamos resolver.</p>
+    </div>
+
+    <div class="principles reveal-stagger">
+      <div class="principle">
+        <div class="icon">01</div>
+        <h3>Foco em resultado, não em alcance</h3>
+        <p>Métrica que não vira receita não é métrica — é vaidade. Toda entrega é amarrada a um indicador que sua liderança vai cobrar. Se não puder ser medido, não tem por que ser feito.</p>
+      </div>
+      <div class="principle">
+        <div class="icon">02</div>
+        <h3>Inovação aplicada, não inovação retórica</h3>
+        <p>IA, BI, automação não são adjetivos pra apresentação. São ferramentas que resolvem problema real ou ficam fora do escopo. A gente entrega tecnologia útil — não buzzword bingo.</p>
+      </div>
+      <div class="principle">
+        <div class="icon">03</div>
+        <h3>Parceria longa, não venda transacional</h3>
+        <p>Software bom é software vivo. Trabalhamos como extensão da sua equipe técnica — não como fornecedor que entrega e some. Cliente nosso continua cliente porque o sistema continua entregando.</p>
+      </div>
+      <div class="principle">
+        <div class="icon">04</div>
+        <h3>Crescimento previsível, não crescimento de surto</h3>
+        <p>Crescer no improviso tem teto. Crescer com sistema tem método — e método é o que separa empresa que escala da empresa que sobrevive até dar errado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="metrics-strip reveal-stagger">
+      <div class="item"><div class="v" data-counter="48">0</div><div class="l">Sistemas em produção</div></div>
+      <div class="item"><div class="v" data-counter="94" data-suffix="%">0</div><div class="l">Clientes que continuam</div></div>
+      <div class="item"><div class="v" data-counter="2024">0</div><div class="l">Fundada em Aracaju · SE</div></div>
+      <div class="item"><div class="v" data-counter="32">0</div><div class="l">Operações ativas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" style="padding-top:80px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 03 ·</span> CO-FUNDADORES</span>
+        <h2 class="h2" style="margin-top:14px">Duas frentes que andam<br>juntas desde o dia um.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">A Conexinfinity nasceu de uma parceria entre comercial e tecnologia. Você fala com quem vende e com quem constrói — sem camada intermediária, sem pingue-pongue de proposta. Decisão rápida porque o decisor está na mesa.</p>
+    </div>
+
+    <div class="team reveal-stagger">
+      <div class="team-card">
+        <div class="team-avatar">LS</div>
+        <div class="team-name">Larissa Silva</div>
+        <div class="team-role">Co-Founder · Co-CEO · Visão Comercial</div>
+        <p>Cofundadora da Conexinfinity ao lado de Ramon. Lidera a frente comercial e de estratégia — da prospecção ao fechamento, do posicionamento de marca à relação com cliente. Mistura visão de negócio com obsessão por execução.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">RR</div>
+        <div class="team-name">Ramon Rodrigues</div>
+        <div class="team-role">Co-Founder · Co-CEO · CTO · Tecnologia</div>
+        <p>Cofundador da Conexinfinity ao lado de Larissa. Lidera a frente de tecnologia, inovação e produto — arquitetura dos sistemas, decisões de stack e construção das soluções. Cada sistema entregue passou pela mesa dele primeiro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" style="padding-top:60px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 04 ·</span> TRAJETÓRIA</span>
+        <h2 class="h2" style="margin-top:14px">De Aracaju pro Brasil — em<br>capítulos com nome e data.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">A Conexinfinity é uma empresa nova com uma tese antiga: empresa pequena também merece sistema sob medida. Cada marco aqui veio com um cliente real e um problema real resolvido — não com slide bonito.</p>
+    </div>
+
+    <div class="timeline reveal-stagger">
+      <div class="tl-item">
+        <div class="tl-year">2024 · FUNDAÇÃO</div>
+        <div>
+          <div class="tl-title">A primeira tela escrita do zero</div>
+          <div class="tl-text">Larissa e Ramon fundam a Conexinfinity em <strong>Aracaju, Sergipe</strong>, com uma tese clara: empresa pequena também merece sistema sob medida. Comercial e tecnologia caminhando lado a lado desde o dia um — Larissa abrindo cliente, Ramon entregando código. Os primeiros projetos substituem planilha por software de verdade em operações da região.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2025 · ESTRUTURAÇÃO</div>
+        <div>
+          <div class="tl-title">Do projeto ao processo</div>
+          <div class="tl-text">A oferta amadurece. Ampliamos o portfólio para automações, dashboards e integrações — e estruturamos os três planos (Basic, Master e Premium) que organizam a entrega por fase do cliente. Primeiros sistemas ganham continuidade, com clientes evoluindo de Basic para Master.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2026 · INTELLIGENCE OS</div>
+        <div>
+          <div class="tl-title">IA, BI e a fase atual</div>
+          <div class="tl-text">Lançamos soluções com inteligência artificial aplicada à operação — classificação de leads, previsão e atendimento inteligente. Não como hype: como módulo que entra no escopo quando faz sentido. Atendimento expandido para clientes em todo o Brasil, com base em Aracaju.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">PRÓXIMO CAPÍTULO</div>
+        <div>
+          <div class="tl-title">A sua empresa pode estar aqui</div>
+          <div class="tl-text">A história continua nas próximas operações sistematizadas. Sistemas modulares que conversam entre si, cloud nativa, IA embutida em cada camada — e seu negócio entrando nessa virada antes da concorrência. O sistema operacional do crescimento da sua empresa começa quando você marca a primeira conversa.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+  <div class="wrap">
+    <div class="hud cta-final reveal">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="eyebrow" style="justify-content:center"><span class="section-num">PRÓXIMO PASSO ·</span> CONVERSA</span>
+      <h2 class="h2">Quer conhecer a Conexinfinity de <span style="color:var(--cyan)">dentro pra fora?</span></h2>
+      <p class="lead">Marque um diagnóstico de 30 minutos. Você vai falar direto com quem faz — não com vendedor treinado pra fechar.</p>
+      <a href="contato.html" class="btn-primary">Falar com a gente →</a>
+      <div class="cta-status"><span class="dot"></span>SEM SCRIPT DE VENDA · CONVERSA REAL</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-tagline" aria-label="conexinfinity"><span class="b">conex</span><span class="i">infinity.</span></div>
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-mark" viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg>
+      <h5>// MANIFESTO</h5>
+      <p style="max-width:34ch">Improviso tem prazo de validade. Quem cresce de verdade, cresce com sistema — e a Conexinfinity existe para construir o seu.</p>
+    </div>
+    <div>
+      <h5>// MÓDULOS</h5>
+      <a href="servicos.html">Sistema administrativo</a>
+      <a href="servicos.html">Automação</a>
+      <a href="servicos.html">Dashboards & BI</a>
+      <a href="servicos.html">Integrações</a>
+      <a href="servicos.html">IA aplicada</a>
+    </div>
+    <div>
+      <h5>// EMPRESA</h5>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Orçamento</a>
+    </div>
+    <div>
+      <h5>// CONTATO</h5>
+      <a href="mailto:contato@conexinfinity.com">contato@conexinfinity.com</a>
+      <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp direto</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>STATUS: ONLINE · ARACAJU · SE</span>
+    <span id="footerClock">--/--/---- · --:--:--</span>
+    <span>© <span id="year">2026</span> CONEXINFINITY</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

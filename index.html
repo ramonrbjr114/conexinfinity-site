@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Conexinfinity — Intelligence OS · Sistemas sob medida</title>
+<meta name="description" content="Sistemas personalizados, automações e inteligência digital para empresas que querem crescer com mais controle. Basic, Master e Premium." />
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Theme inline (anti-flash) — executa antes do CSS carregar -->
+<script>(function(){var t=localStorage.getItem("conex_theme")||"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- model-viewer (Google) — renderiza glTF/GLB sem build step -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+<!-- Brand SVG sprite (reutilizado por nav, loader, footer, watermarks) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="brand-symbol" viewBox="0 0 8704.52 4154.8">
+    <path fill="currentColor" d="M4808.49 2105.46c55.19,-86.41 131.56,-138.38 199.28,-206.33 367,-368.31 959.49,-1099.21 1431.62,-1188.49 880.87,-166.59 1586.46,517.38 1607.87,1314.55 22.45,835.53 -702.04,1580.95 -1581.52,1417.76 -462.54,-85.83 -668.48,-369.57 -906.26,-598.19l-750.99 -739.3zm-467.32 490.51c214.33,120.16 932.88,943.4 1273.62,1198.25 993.02,742.75 2275.86,240.86 2783.37,-647.48 1069.54,-1872.11 -869.91,-3855.16 -2606.94,-2897.77 -232.74,128.27 -411.93,362.29 -646.8,570.07 -76.96,68.09 -127.31,148.52 -202.03,221.02l-1651.29 1629.02c-265.91,262.85 -524.18,649.09 -918.04,748.21 -1051.16,264.55 -1769.73,-609.78 -1695.61,-1488.51 57.86,-686.09 561.13,-1199.59 1205.09,-1240.32 347.62,-21.99 427.68,60.93 685.73,143.07 115.74,-151.38 331.84,-301.69 428.71,-471.9 -684.45,-625.38 -1935.67,-298.99 -2407.84,242.18 -262.15,300.46 -469.96,575.36 -557.7,1109.28 -314.95,1916.52 1811.94,3041.55 3012.19,2111.69l858.79 -807.17c124.21,-119.56 302.02,-319.93 438.75,-419.66z"/>
+    <circle class="dot" cx="3673.59" cy="1421.75" r="309.28" fill="#4d5cff"/>
+  </symbol>
+</svg>
+
+<!-- Backgrounds -->
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <svg class="loader-mark" viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+  <div class="loader-text">Inicializando sistema</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Status bar -->
+<div class="statusbar">
+  <div><span class="dot"></span>CONEXINFINITY.OS · SISTEMA ONLINE</div>
+  <div class="right">
+    <span id="loc">ARACAJU · SE</span>
+    <span id="clock">--:--:--</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Conexinfinity — início">
+      <svg class="brand-mark" viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+      <span class="brand-word"><span class="b">Conex</span><span class="i">infinity</span></span>
+    </a>
+    <ul>
+      <li><a class="link active" href="index.html">Início</a></li>
+      <li><a class="link" href="servicos.html">Serviços</a></li>
+      <li><a class="link" href="sobre.html">Sobre</a></li>
+      <li><a class="link" href="blog.html">Blog</a></li>
+      <li><a class="link" href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Mudar para modo claro" title="Modo claro/escuro">
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6L4 4M20 20l-1.6-1.6M5.6 18.4L4 20M20 4l-1.6 1.6"/></svg>
+      </button>
+      <a href="contato.html" class="cta">Orçamento →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="section hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal-stagger">
+        <span class="hero-tag"><span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--cyan)"></span> Sistemas personalizados · Software house</span>
+        <h1 class="h1" style="margin-top:24px;max-width:20ch">
+          Sua empresa não precisa crescer no <span class="accent">improviso.</span> Precisa de um sistema.
+        </h1>
+        <p class="lead">Substituímos planilha, WhatsApp solto e processo manual por um sistema próprio — desenhado sobre a operação real do seu negócio, não adaptado de um molde de prateleira.</p>
+        <div class="hero-ctas">
+          <a href="contato.html" class="btn-primary">Solicitar Orçamento →</a>
+          <a href="#planos" class="btn-secondary">Ver planos</a>
+        </div>
+        <div class="hero-meta">DIAGNÓSTICO GRATUITO · 30 MIN · ESCOPO E PROPOSTA SOB MEDIDA</div>
+      </div>
+
+      <div class="hud hud-3d reveal" id="hero3d">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+
+        <div class="hud-3d-label"><span>// CONEXINFINITY.OS · 3D RENDER</span><span class="v">v2.0</span></div>
+
+        <!-- Marca 3D renderizada do GLB (gerado no Blender) -->
+        <model-viewer
+          id="brand3d"
+          class="hud-3d-stage"
+          src="brand-3d.glb"
+          alt="Símbolo Conexinfinity em 3D"
+          autoplay
+          camera-controls
+          disable-zoom
+          disable-tap
+          interaction-prompt="none"
+          shadow-intensity="0"
+          exposure="1.05"
+          environment-image="neutral"
+          camera-orbit="0deg 90deg 8m"
+          field-of-view="26deg"
+          loading="lazy"></model-viewer>
+
+        <!-- Fallback (mobile / falha de carregamento / antes da cena renderizar) -->
+        <div class="hud-3d-fallback" aria-hidden="true">
+          <svg viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg>
+          <span class="hud-3d-fallback-label">Carregando módulo 3D…</span>
+        </div>
+
+        <div class="hud-3d-scan"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PAIN -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 02 ·</span> DIAGNÓSTICO</span>
+        <h2 class="h2" style="margin-top:14px">
+          Se algum desses cenários<br>
+          parece sua rotina — você já cresceu<br>
+          mais do que a sua estrutura.
+        </h2>
+      </div>
+      <p class="lead reveal" style="max-width:40ch">Toda empresa cresce no improviso até um ponto. Depois desse ponto, improviso vira teto. O problema deixa de ser falta de esforço — e passa a ser falta de estrutura para sustentar o que já foi conquistado.</p>
+    </div>
+
+    <div class="pain-list reveal-stagger">
+      <div class="pain-item"><span class="x">[01]</span><p>Tarefa que repete toda semana — e ninguém ainda parou para automatizar.</p></div>
+      <div class="pain-item"><span class="x">[02]</span><p>Cliente importante que sumiu de uma planilha e reapareceu em outra.</p></div>
+      <div class="pain-item"><span class="x">[03]</span><p>Equipe esperando resposta sua para tudo. Você virou o gargalo da operação.</p></div>
+      <div class="pain-item"><span class="x">[04]</span><p>Mesma informação digitada três vezes em três lugares diferentes.</p></div>
+      <div class="pain-item"><span class="x">[05]</span><p>Cada novo cliente significa mais caos — não necessariamente mais lucro.</p></div>
+      <div class="pain-item"><span class="x">[06]</span><p>Decidir o mês olhando para números que ninguém tem certeza se batem.</p></div>
+    </div>
+
+    <p class="pain-quote reveal" style="margin-top:60px">
+      Se a operação depende da memória da equipe,<br>
+      ela tem o tamanho da memória da equipe. Está na hora<br>
+      de transformar <span>processo em sistema.</span>
+    </p>
+  </div>
+</section>
+
+<!-- SOLUTION / MODULES -->
+<section class="section" id="solucao">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 03 ·</span> MÓDULOS DA SOLUÇÃO</span>
+        <h2 class="h2" style="margin-top:14px">
+          O sistema não obriga você<br>
+          a mudar a sua empresa.<br>
+          Ele aprende com ela.
+        </h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">Cada projeto é montado a partir de módulos sob medida. Você começa pelo que dói mais hoje e expande conforme o sistema prova valor — sem reescrever nada no caminho.</p>
+    </div>
+
+    <div class="modules reveal-stagger">
+      <div class="module">
+        <div class="code">MOD-01 · ADMIN</div>
+        <h3>Sistema Administrativo</h3>
+        <p>Centralize clientes, pedidos, tarefas e processos internos em uma só tela. Sua operação para de viver em planilha e WhatsApp espalhados — e passa a viver em um lugar só.</p>
+      </div>
+      <div class="module">
+        <div class="code">MOD-02 · AUTOMAÇÃO</div>
+        <h3>Automação de Processos</h3>
+        <p>Follow-up que dispara sozinho. Notificação que chega na hora certa. Cadastro que se atualiza sem ninguém digitar duas vezes. A equipe foca no que pensa, não no que repete.</p>
+      </div>
+      <div class="module">
+        <div class="code">MOD-03 · DADOS</div>
+        <h3>Dashboards & BI</h3>
+        <p>Receita, conversão, performance e operação em painéis em tempo real. Você decide olhando para o que importa — não para planilha de fim de mês que ninguém tem certeza se está certa.</p>
+      </div>
+      <div class="module">
+        <div class="code">MOD-04 · INTEGRAÇÃO</div>
+        <h3>Integrações</h3>
+        <p>Seu sistema conversa com WhatsApp, ERP, CRM, e-commerce, planilhas e APIs. A informação anda sozinha entre as ferramentas — sua equipe para de ser carteiro de dado.</p>
+      </div>
+      <div class="module">
+        <div class="code">MOD-05 · IA</div>
+        <h3>Inteligência Artificial</h3>
+        <p>IA que classifica leads, prevê comportamento e responde clientes 24/7. Não é hype — é máquina trabalhando enquanto seu time foca em decisão e relacionamento.</p>
+      </div>
+      <div class="module">
+        <div class="code">MOD-06 · CLOUD</div>
+        <h3>Infraestrutura em Nuvem</h3>
+        <p>Cloud com 99,9% de disponibilidade. Seu sistema escala junto com a empresa — sem reescrever nada quando o volume triplicar e sem susto na conta no fim do mês.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="section" style="padding-top:60px">
+  <div class="wrap">
+    <div class="metrics-strip reveal-stagger">
+      <div class="item"><div class="v" data-counter="48">0</div><div class="l">Sistemas em produção</div></div>
+      <div class="item"><div class="v" data-counter="94" data-suffix="%">0</div><div class="l">Clientes que continuam</div></div>
+      <div class="item"><div class="v" data-counter="2024">0</div><div class="l">Fundada em Aracaju · SE</div></div>
+      <div class="item"><div class="v" data-counter="0" data-suffix="%">0</div><div class="l">Software de prateleira — só sob medida</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="processo">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 04 ·</span> PROTOCOLO DE ATIVAÇÃO</span>
+        <h2 class="h2" style="margin-top:14px">Da primeira conversa<br>ao sistema rodando.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">Sem proposta padrão, sem script de venda, sem promessa que não cabe no escopo. Tudo começa por uma conversa de 30 minutos — e só avança depois que faz sentido pros dois lados.</p>
+    </div>
+
+    <div class="steps reveal-stagger">
+      <div class="step"><span class="n">01 ·</span><div><h4>Diagnóstico gratuito</h4><p>Mapeamos sua operação, gargalos e prioridades em 30 minutos. Você sai com um plano claro do que precisa ser sistematizado primeiro — mesmo se decidir não nos contratar.</p></div></div>
+      <div class="step"><span class="n">02 ·</span><div><h4>Escopo sob medida</h4><p>Definimos juntos o que entra agora e o que fica para depois. Tudo descrito em proposta antes da primeira linha de código — zero surpresa de preço, prazo ou entrega.</p></div></div>
+      <div class="step"><span class="n">03 ·</span><div><h4>Construção em sprints</h4><p>Entregamos por blocos com você acompanhando em dashboard. Ajustes em tempo real — não você esperando seis meses para ver se o sistema vai funcionar.</p></div></div>
+      <div class="step"><span class="n">04 ·</span><div><h4>Operação e evolução</h4><p>Sistema entregue não é fim, é início. Continuamos junto, evoluindo o que mais traz resultado — porque software bom é software vivo, não software entregue e esquecido.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="section" id="planos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 05 ·</span> SISTEMAS PERSONALIZADOS</span>
+        <h2 class="h2" style="margin-top:14px">Cada estágio pede<br>um sistema diferente.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:44ch">Não vendemos pacote pronto. Cada plano é o ponto de partida — o sistema final é desenhado sobre a sua operação real. Escolha pelo momento da empresa hoje, não pelo tamanho da fatura.</p>
+    </div>
+
+    <div class="plans reveal-stagger">
+
+      <div class="plan">
+        <div class="plan-tier">[ TIER 01 · FUNDAÇÃO ]</div>
+        <div class="plan-name">Basic</div>
+        <div class="plan-pitch">O primeiro sistema da sua empresa. Para quem ainda opera no WhatsApp, planilha e na cabeça da equipe — e quer parar de perder informação.</div>
+        <div class="plan-price">
+          <span class="from">A partir de</span>
+          <span class="v">R$ 3.500</span>
+        </div>
+        <ul>
+          <li>Sistema próprio, com as telas e regras que sua operação realmente usa</li>
+          <li>Acesso fluido no celular e no computador — equipe trabalha de onde estiver</li>
+          <li>Painel intuitivo: o time entra e usa no primeiro dia, sem treinamento longo</li>
+          <li>Integração com a ferramenta principal do seu negócio (WhatsApp, planilha, e-mail ou outra)</li>
+          <li>30 dias de suporte direto pós-entrega para ajustes finos</li>
+        </ul>
+        <a href="contato.html" class="btn-secondary">Solicitar Orçamento</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="plan-tier">[ TIER 02 · CRESCIMENTO ]</div>
+        <div class="plan-name">Master</div>
+        <div class="plan-pitch">Para empresas em crescimento que já não cabem mais em uma planilha. Centralize a operação, automatize o repetitivo e decida com dados em tempo real.</div>
+        <div class="plan-price">
+          <span class="from">A partir de</span>
+          <span class="v">R$ 7.500</span>
+        </div>
+        <ul>
+          <li>Sistema robusto desenhado em cima dos seus processos reais</li>
+          <li>Controle de usuários e permissões — cada pessoa vê só o que precisa</li>
+          <li>Até 3 integrações (WhatsApp, ERP, CRM, e-commerce, planilhas, APIs)</li>
+          <li>Dashboard em tempo real com os indicadores que movem o seu negócio</li>
+          <li>Automações rodando em segundo plano — menos retrabalho, mais consistência</li>
+          <li>90 dias de suporte dedicado, com ajustes e evolução contínua</li>
+        </ul>
+        <a href="contato.html" class="btn-primary">Solicitar Orçamento →</a>
+      </div>
+
+      <div class="plan">
+        <div class="plan-tier">[ TIER 03 · ENTERPRISE ]</div>
+        <div class="plan-name">Premium</div>
+        <div class="plan-pitch">Para operações maduras que precisam de IA, BI e infraestrutura de verdade. Um ecossistema completo, escalável e preparado para o próximo nível.</div>
+        <div class="plan-price">
+          <span class="from">A partir de</span>
+          <span class="v">R$ 15.500</span>
+        </div>
+        <ul>
+          <li>Sistema enterprise modular, projetado para evoluir junto com o negócio</li>
+          <li>IA aplicada à operação: classificação, previsão e atendimento inteligente</li>
+          <li>Integrações ilimitadas via APIs — toda a sua stack conversando em um só fluxo</li>
+          <li>BI estratégico: leitura clara de receita, conversão, performance e operação</li>
+          <li>Cloud escalável com 99,9% de disponibilidade — cresce sem reinvenção</li>
+          <li>Treinamento da sua equipe — autonomia desde o primeiro mês</li>
+          <li>6 meses de suporte dedicado, com canal exclusivo e SLA</li>
+        </ul>
+        <a href="contato.html" class="btn-secondary">Solicitar Orçamento</a>
+      </div>
+
+    </div>
+
+    <p class="plan-note">* Valores de partida. O escopo final é fechado depois do diagnóstico — sem surpresa, com tudo descrito em proposta.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+  <div class="wrap">
+    <div class="hud cta-final reveal">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <span class="eyebrow" style="justify-content:center"><span class="section-num">SEÇÃO 06 ·</span> ATIVAÇÃO DO SISTEMA</span>
+      <h2 class="h2">Sua próxima fase começa por uma <span style="color:var(--cyan)">conversa de 30 minutos.</span></h2>
+      <p class="lead">Diagnóstico gratuito. Você descreve a operação, a gente mapeia o que sistematizar primeiro — e você sai com um escopo realista e um orçamento sob medida. Sem compromisso, sem script de venda.</p>
+      <a href="contato.html" class="btn-primary">Solicitar Orçamento →</a>
+      <div class="cta-status"><span class="dot"></span>NOVAS VAGAS ABERTAS NESTA SEMANA · RESPOSTA EM ATÉ 24H</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-tagline" aria-label="conexinfinity"><span class="b">conex</span><span class="i">infinity.</span></div>
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-mark" viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+      <h5>// MANIFESTO</h5>
+      <p style="max-width:34ch">Improviso tem prazo de validade. Quem cresce de verdade, cresce com sistema — e a Conexinfinity existe para construir o seu.</p>
+    </div>
+    <div>
+      <h5>// MÓDULOS</h5>
+      <a href="servicos.html">Sistema administrativo</a>
+      <a href="servicos.html">Automação</a>
+      <a href="servicos.html">Dashboards & BI</a>
+      <a href="servicos.html">Integrações</a>
+      <a href="servicos.html">IA aplicada</a>
+    </div>
+    <div>
+      <h5>// EMPRESA</h5>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Orçamento</a>
+    </div>
+    <div>
+      <h5>// CONTATO</h5>
+      <a href="mailto:contato@conexinfinity.com">contato@conexinfinity.com</a>
+      <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp direto</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>STATUS: ONLINE · ARACAJU · SE</span>
+    <span id="footerClock">--/--/---- · --:--:--</span>
+    <span>© <span id="year">2026</span> CONEXINFINITY</span>
+  </div>
+</footer>
+
+<!-- Libs + scripts -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

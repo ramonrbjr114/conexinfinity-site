@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — Conexinfinity · Inteligência prática para operação</title>
+<meta name="description" content="Artigos, análises e estudos sobre sistemas, automação, IA aplicada, integração e gestão. Conteúdo prático para empresas que crescem com método." />
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var t=localStorage.getItem("conex_theme")||"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="brand-symbol" viewBox="0 0 8704.52 4154.8">
+    <path fill="currentColor" d="M4808.49 2105.46c55.19,-86.41 131.56,-138.38 199.28,-206.33 367,-368.31 959.49,-1099.21 1431.62,-1188.49 880.87,-166.59 1586.46,517.38 1607.87,1314.55 22.45,835.53 -702.04,1580.95 -1581.52,1417.76 -462.54,-85.83 -668.48,-369.57 -906.26,-598.19l-750.99 -739.3zm-467.32 490.51c214.33,120.16 932.88,943.4 1273.62,1198.25 993.02,742.75 2275.86,240.86 2783.37,-647.48 1069.54,-1872.11 -869.91,-3855.16 -2606.94,-2897.77 -232.74,128.27 -411.93,362.29 -646.8,570.07 -76.96,68.09 -127.31,148.52 -202.03,221.02l-1651.29 1629.02c-265.91,262.85 -524.18,649.09 -918.04,748.21 -1051.16,264.55 -1769.73,-609.78 -1695.61,-1488.51 57.86,-686.09 561.13,-1199.59 1205.09,-1240.32 347.62,-21.99 427.68,60.93 685.73,143.07 115.74,-151.38 331.84,-301.69 428.71,-471.9 -684.45,-625.38 -1935.67,-298.99 -2407.84,242.18 -262.15,300.46 -469.96,575.36 -557.7,1109.28 -314.95,1916.52 1811.94,3041.55 3012.19,2111.69l858.79 -807.17c124.21,-119.56 302.02,-319.93 438.75,-419.66z"/>
+    <circle class="dot" cx="3673.59" cy="1421.75" r="309.28" fill="#4d5cff"/>
+  </symbol>
+</svg>
+
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="loader" id="loader">
+  <svg class="loader-mark" viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+  <div class="loader-text">Carregando arquivo</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="statusbar">
+  <div><span class="dot"></span>CONEXINFINITY.OS · ARQUIVO DE INSIGHTS</div>
+  <div class="right"><span>ARACAJU · SE</span><span id="clock">--:--:--</span></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg><span class="brand-word"><span class="b">Conex</span><span class="i">infinity</span></span></a>
+    <ul>
+      <li><a class="link" href="index.html">Início</a></li>
+      <li><a class="link" href="servicos.html">Serviços</a></li>
+      <li><a class="link" href="sobre.html">Sobre</a></li>
+      <li><a class="link active" href="blog.html">Blog</a></li>
+      <li><a class="link" href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Mudar para modo claro" title="Modo claro/escuro">
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6L4 4M20 20l-1.6-1.6M5.6 18.4L4 20M20 4l-1.6 1.6"/></svg>
+      </button>
+      <a href="contato.html" class="cta">Orçamento →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="section hero-inner">
+  <div class="wrap reveal-stagger">
+    <span class="eyebrow"><span class="section-num">// ARQUIVO ·</span> 10 ARTIGOS PUBLICADOS</span>
+    <h1 class="h1">Inteligência prática para operação que <span class="accent">não pode parar de aprender.</span></h1>
+    <p class="lead">Artigos, análises e estudos sobre o que está acontecendo na fronteira entre sistemas, automação e gestão de verdade. Sem fluff de blog corporativo — escrevemos pra quem decide.</p>
+  </div>
+</header>
+
+<!-- BLOG GRID -->
+<section class="section" style="padding-top:60px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 01 ·</span> ÚLTIMAS PUBLICAÇÕES</span>
+        <h2 class="h2" style="margin-top:14px">Conteúdo para quem quer<br>operar — não para quem quer ler.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">Cada artigo nasce de um problema que resolvemos para um cliente real. Você lê e leva pra dentro da sua operação na mesma semana.</p>
+    </div>
+
+    <div class="blog-grid reveal-stagger">
+
+      <!-- Featured / artigo principal -->
+      <a href="#" class="blog-card featured">
+        <div class="body">
+          <div class="tag">DESTAQUE · OPERAÇÃO</div>
+          <h3>SaaS pronto ou sistema sob medida? O dilema das empresas em escala.</h3>
+          <p>A fase em que o software de prateleira começa a custar mais do que entrega — e como decidir o ponto certo de migrar pra sistema próprio sem reescrever tudo no caminho. Um framework de 4 critérios pra parar de adaptar a empresa à ferramenta.</p>
+          <div class="meta"><span>15 MIN · CONEXINFINITY</span><span class="read">Ler artigo →</span></div>
+        </div>
+        <div class="visual">
+          <svg viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">AUTOMAÇÃO</div>
+        <h3>Por que sua empresa ainda perde horas em tarefas repetitivas</h3>
+        <p>O custo invisível dos processos manuais e como recuperar produtividade com automações simples — sem precisar reformar a operação.</p>
+        <div class="meta"><span>8 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">IA APLICADA</div>
+        <h3>IA aplicada à operação: além do hype, o que realmente funciona</h3>
+        <p>Casos práticos de IA generativa que estão reduzindo tempo de resposta e melhorando decisões — separados do que é só promessa de demo.</p>
+        <div class="meta"><span>12 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">CLOUD</div>
+        <h3>Infraestrutura em nuvem: escalar sem reinventar a roda</h3>
+        <p>O que considerar antes de migrar sua operação para a nuvem e quando isso vale a pena de verdade — com checklist técnico.</p>
+        <div class="meta"><span>10 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">DADOS</div>
+        <h3>Como construir dashboards que sua equipe realmente usa</h3>
+        <p>Decisões baseadas em dados começam com painéis claros — e a maioria dos dashboards é abandonada na primeira semana. Veja por quê.</p>
+        <div class="meta"><span>9 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">CRESCIMENTO</div>
+        <h3>Como gerar leads qualificados em 2025</h3>
+        <p>Estratégias práticas para atrair clientes potenciais e transformar visitantes em oportunidades reais de negócio — com taxa que se sustenta.</p>
+        <div class="meta"><span>11 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">SEO</div>
+        <h3>SEO básico: guia para sua empresa aparecer no Google</h3>
+        <p>Os fundamentos de SEO e as técnicas essenciais para melhorar o posicionamento do seu site nos resultados de busca — sem precisar virar especialista.</p>
+        <div class="meta"><span>14 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">CHATBOTS</div>
+        <h3>Chatbots: o atendente que vende 24 horas por dia</h3>
+        <p>Como a automação com chatbots inteligentes pode aumentar suas vendas sem precisar contratar mais funcionários. Casos reais e armadilhas.</p>
+        <div class="meta"><span>10 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">GROWTH</div>
+        <h3>O que é Growth Hacking e como aplicar no seu negócio</h3>
+        <p>O conceito de growth hacking e técnicas práticas para acelerar o crescimento da sua empresa de forma inteligente — sem queimar caixa.</p>
+        <div class="meta"><span>9 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">PRESENÇA DIGITAL</div>
+        <h3>Por que sua empresa precisa de uma presença digital forte</h3>
+        <p>Reconhecimento, credibilidade e geração de demanda começam pela forma como sua empresa aparece online — e a maioria erra no básico.</p>
+        <div class="meta"><span>7 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="tag">AUDIÊNCIA</div>
+        <h3>Os melhores canais para alcançar a Geração Z</h3>
+        <p>Plataformas e formatos preferidos pela Geração Z e como adaptar sua comunicação para esse público — com dados de pesquisa, não achismo.</p>
+        <div class="meta"><span>8 MIN</span><span class="read">Ler →</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+  <div class="wrap">
+    <div class="hud cta-final reveal">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="eyebrow" style="justify-content:center"><span class="section-num">PRÓXIMO PASSO ·</span> APLICAR</span>
+      <h2 class="h2">Leu, entendeu, agora <span style="color:var(--cyan)">vamos aplicar?</span></h2>
+      <p class="lead">A teoria do blog vira sistema na sua empresa em 30 minutos de conversa. Mostra a operação, a gente mapeia o que sistematizar primeiro.</p>
+      <a href="contato.html" class="btn-primary">Solicitar diagnóstico →</a>
+      <div class="cta-status"><span class="dot"></span>SEM COMPROMISSO · 30 MINUTOS</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-tagline" aria-label="conexinfinity"><span class="b">conex</span><span class="i">infinity.</span></div>
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-mark" viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg>
+      <h5>// MANIFESTO</h5>
+      <p style="max-width:34ch">Improviso tem prazo de validade. Quem cresce de verdade, cresce com sistema — e a Conexinfinity existe para construir o seu.</p>
+    </div>
+    <div>
+      <h5>// MÓDULOS</h5>
+      <a href="servicos.html">Sistema administrativo</a>
+      <a href="servicos.html">Automação</a>
+      <a href="servicos.html">Dashboards & BI</a>
+      <a href="servicos.html">Integrações</a>
+      <a href="servicos.html">IA aplicada</a>
+    </div>
+    <div>
+      <h5>// EMPRESA</h5>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Orçamento</a>
+    </div>
+    <div>
+      <h5>// CONTATO</h5>
+      <a href="mailto:contato@conexinfinity.com">contato@conexinfinity.com</a>
+      <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp direto</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>STATUS: ONLINE · ARACAJU · SE</span>
+    <span id="footerClock">--/--/---- · --:--:--</span>
+    <span>© <span id="year">2026</span> CONEXINFINITY</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

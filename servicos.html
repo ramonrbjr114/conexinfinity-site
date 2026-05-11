@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Serviços — Conexinfinity · Sistemas, automações, IA e dados</title>
+<meta name="description" content="Sistemas personalizados, automações, dashboards, integrações e IA para empresas que querem operar com inteligência. Conheça nossos módulos." />
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var t=localStorage.getItem("conex_theme")||"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="brand-symbol" viewBox="0 0 8704.52 4154.8">
+    <path fill="currentColor" d="M4808.49 2105.46c55.19,-86.41 131.56,-138.38 199.28,-206.33 367,-368.31 959.49,-1099.21 1431.62,-1188.49 880.87,-166.59 1586.46,517.38 1607.87,1314.55 22.45,835.53 -702.04,1580.95 -1581.52,1417.76 -462.54,-85.83 -668.48,-369.57 -906.26,-598.19l-750.99 -739.3zm-467.32 490.51c214.33,120.16 932.88,943.4 1273.62,1198.25 993.02,742.75 2275.86,240.86 2783.37,-647.48 1069.54,-1872.11 -869.91,-3855.16 -2606.94,-2897.77 -232.74,128.27 -411.93,362.29 -646.8,570.07 -76.96,68.09 -127.31,148.52 -202.03,221.02l-1651.29 1629.02c-265.91,262.85 -524.18,649.09 -918.04,748.21 -1051.16,264.55 -1769.73,-609.78 -1695.61,-1488.51 57.86,-686.09 561.13,-1199.59 1205.09,-1240.32 347.62,-21.99 427.68,60.93 685.73,143.07 115.74,-151.38 331.84,-301.69 428.71,-471.9 -684.45,-625.38 -1935.67,-298.99 -2407.84,242.18 -262.15,300.46 -469.96,575.36 -557.7,1109.28 -314.95,1916.52 1811.94,3041.55 3012.19,2111.69l858.79 -807.17c124.21,-119.56 302.02,-319.93 438.75,-419.66z"/>
+    <circle class="dot" cx="3673.59" cy="1421.75" r="309.28" fill="#4d5cff"/>
+  </symbol>
+</svg>
+
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="loader" id="loader">
+  <svg class="loader-mark" viewBox="0 0 8704.52 4154.8" aria-hidden="true"><use href="#brand-symbol"/></svg>
+  <div class="loader-text">Carregando módulos</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="statusbar">
+  <div><span class="dot"></span>CONEXINFINITY.OS · MÓDULOS DISPONÍVEIS</div>
+  <div class="right"><span>ARACAJU · SE</span><span id="clock">--:--:--</span></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg><span class="brand-word"><span class="b">Conex</span><span class="i">infinity</span></span></a>
+    <ul>
+      <li><a class="link" href="index.html">Início</a></li>
+      <li><a class="link active" href="servicos.html">Serviços</a></li>
+      <li><a class="link" href="sobre.html">Sobre</a></li>
+      <li><a class="link" href="blog.html">Blog</a></li>
+      <li><a class="link" href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Mudar para modo claro" title="Modo claro/escuro">
+        <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6L4 4M20 20l-1.6-1.6M5.6 18.4L4 20M20 4l-1.6 1.6"/></svg>
+      </button>
+      <a href="contato.html" class="cta">Orçamento →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="section hero-inner">
+  <div class="wrap reveal-stagger">
+    <span class="eyebrow"><span class="section-num">CATÁLOGO ·</span> MÓDULOS DA CONEXINFINITY</span>
+    <h1 class="h1">Tudo que sua operação precisa pra <span class="hero-tag" style="font-size:inherit;letter-spacing:-.02em;border:none;background:linear-gradient(120deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;padding:0">parar de improvisar.</span></h1>
+    <p class="lead">Sistemas sob medida, automações, dashboards, integrações e IA — agrupados em módulos que se combinam conforme a fase do seu negócio. Você começa pelo que dói mais hoje e expande quando o sistema prova valor.</p>
+    <div class="hero-ctas">
+      <a href="contato.html" class="btn-primary">Solicitar Orçamento →</a>
+      <a href="#planos" class="btn-secondary">Ver planos</a>
+    </div>
+  </div>
+</header>
+
+<!-- 8 SERVIÇOS -->
+<section class="section" style="padding-top:60px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 01 ·</span> CATÁLOGO DE MÓDULOS</span>
+        <h2 class="h2" style="margin-top:14px">8 frentes que se combinam<br>na medida da sua operação.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:42ch">Cada módulo resolve uma dor específica. Misturados, formam o ecossistema que sustenta o seu negócio — sem você precisar contratar 5 fornecedores diferentes.</p>
+    </div>
+
+    <div class="modules reveal-stagger">
+
+      <div class="module">
+        <div class="code">MOD-01 · CORE</div>
+        <h3>Sistemas Personalizados</h3>
+        <p>O coração da operação. Sistema próprio, com as telas, regras e fluxos da sua empresa — não um SaaS genérico que você precisa torcer pra funcionar.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-02 · GROWTH</div>
+        <h3>Tráfego Pago — Google & Meta</h3>
+        <p>Campanhas estratégicas em Google Ads, Meta Ads e TikTok calibradas para ROI, não para alcance vazio. Cada real investido tem rastreabilidade até a venda.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-03 · LEADS</div>
+        <h3>Geração de Leads</h3>
+        <p>Funis de venda otimizados, captura inteligente e automação de marketing. Transforme visitante em oportunidade e oportunidade em negócio fechado.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-04 · BOT</div>
+        <h3>Atendente Digital 24h</h3>
+        <p>Chatbots inteligentes que vendem enquanto você dorme. Atendimento automatizado com IA — você nunca mais perde lead por demorar a responder.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-05 · GROWTH</div>
+        <h3>Growth Hacking</h3>
+        <p>Crescimento acelerado baseado em dados, testes A/B e otimização contínua. Cada hipótese é validada com número, não com achismo de reunião.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-06 · SOCIAL</div>
+        <h3>Gestão de Redes Sociais</h3>
+        <p>Conteúdo estratégico e gestão profissional pra engajar audiência e construir comunidade. Sua marca para de ser invisível no feed da concorrência.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-07 · UI/UX</div>
+        <h3>Sites & Landing Pages</h3>
+        <p>Sites modernos, landing pages de alta conversão e identidade visual que posiciona sua empresa como referência — não como mais uma na vitrine digital.</p>
+      </div>
+
+      <div class="module">
+        <div class="code">MOD-08 · IA</div>
+        <h3>Inteligência Artificial</h3>
+        <p>IA generativa, machine learning e modelos preditivos que revelam padrões, classificam leads e apoiam decisão com base em evidência — não em achismo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMO COMBINAM -->
+<section class="section" style="padding-top:40px;padding-bottom:80px">
+  <div class="wrap">
+    <div class="pricing-callout reveal">
+      <div class="left">
+        <h3>Não sabe por onde começar?</h3>
+        <p>Em 30 minutos, mapeamos qual combinação de módulos faz sentido pra fase atual da sua empresa. Sem custo, sem compromisso — você sai com um plano claro de prioridades.</p>
+      </div>
+      <a href="contato.html" class="btn-primary">Solicitar diagnóstico →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS (mesmos da home) -->
+<section class="section" id="planos" style="padding-top:60px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <span class="eyebrow"><span class="section-num">SEÇÃO 02 ·</span> SISTEMAS PERSONALIZADOS</span>
+        <h2 class="h2" style="margin-top:14px">Cada estágio pede<br>um sistema diferente.</h2>
+      </div>
+      <p class="lead reveal" style="max-width:44ch">Não vendemos pacote pronto. Cada plano é o ponto de partida — o sistema final é desenhado sobre a sua operação real. Escolha pelo momento da empresa hoje, não pelo tamanho da fatura.</p>
+    </div>
+
+    <div class="plans reveal-stagger">
+
+      <div class="plan">
+        <div class="plan-tier">[ TIER 01 · FUNDAÇÃO ]</div>
+        <div class="plan-name">Basic</div>
+        <div class="plan-pitch">O primeiro sistema da sua empresa. Para quem ainda opera no WhatsApp, planilha e na cabeça da equipe — e quer parar de perder informação.</div>
+        <div class="plan-price"><span class="from">A partir de</span><span class="v">R$ 3.500</span></div>
+        <ul>
+          <li>Sistema próprio, com as telas e regras que sua operação realmente usa</li>
+          <li>Acesso fluido no celular e no computador — equipe trabalha de onde estiver</li>
+          <li>Painel intuitivo: o time entra e usa no primeiro dia, sem treinamento longo</li>
+          <li>Integração com a ferramenta principal do seu negócio</li>
+          <li>30 dias de suporte direto pós-entrega</li>
+        </ul>
+        <a href="contato.html" class="btn-secondary">Solicitar Orçamento</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="plan-tier">[ TIER 02 · CRESCIMENTO ]</div>
+        <div class="plan-name">Master</div>
+        <div class="plan-pitch">Para empresas em crescimento que já não cabem mais em uma planilha. Centralize, automatize o repetitivo e decida com dados em tempo real.</div>
+        <div class="plan-price"><span class="from">A partir de</span><span class="v">R$ 7.500</span></div>
+        <ul>
+          <li>Sistema robusto desenhado em cima dos seus processos reais</li>
+          <li>Controle de usuários e permissões — cada pessoa vê só o que precisa</li>
+          <li>Até 3 integrações (WhatsApp, ERP, CRM, e-commerce, planilhas, APIs)</li>
+          <li>Dashboard em tempo real com indicadores que movem o negócio</li>
+          <li>Automações rodando em segundo plano</li>
+          <li>90 dias de suporte dedicado</li>
+        </ul>
+        <a href="contato.html" class="btn-primary">Solicitar Orçamento →</a>
+      </div>
+
+      <div class="plan">
+        <div class="plan-tier">[ TIER 03 · ENTERPRISE ]</div>
+        <div class="plan-name">Premium</div>
+        <div class="plan-pitch">Para operações maduras que precisam de IA, BI e infraestrutura de verdade. Um ecossistema completo, escalável e preparado para o próximo nível.</div>
+        <div class="plan-price"><span class="from">A partir de</span><span class="v">R$ 15.500</span></div>
+        <ul>
+          <li>Sistema enterprise modular, projetado pra evoluir junto com o negócio</li>
+          <li>IA aplicada à operação: classificação, previsão e atendimento inteligente</li>
+          <li>Integrações ilimitadas via APIs</li>
+          <li>BI estratégico: leitura clara de receita, conversão e operação</li>
+          <li>Cloud escalável com 99,9% de disponibilidade</li>
+          <li>Treinamento da sua equipe</li>
+          <li>6 meses de suporte dedicado, com canal exclusivo e SLA</li>
+        </ul>
+        <a href="contato.html" class="btn-secondary">Solicitar Orçamento</a>
+      </div>
+
+    </div>
+
+    <p class="plan-note">* Valores de partida. O escopo final é fechado depois do diagnóstico — sem surpresa, com tudo descrito em proposta.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+  <div class="wrap">
+    <div class="hud cta-final reveal">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="eyebrow" style="justify-content:center"><span class="section-num">PRÓXIMO PASSO ·</span> ATIVAÇÃO</span>
+      <h2 class="h2">Diga qual módulo você precisa primeiro — a gente desenha <span style="color:var(--cyan)">o resto.</span></h2>
+      <p class="lead">30 minutos. Sem compromisso. Você sai com escopo, prazo e investimento sob medida.</p>
+      <a href="contato.html" class="btn-primary">Solicitar Orçamento →</a>
+      <div class="cta-status"><span class="dot"></span>RESPOSTA EM ATÉ 24H</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-tagline" aria-label="conexinfinity"><span class="b">conex</span><span class="i">infinity.</span></div>
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-mark" viewBox="0 0 8704.52 4154.8"><use href="#brand-symbol"/></svg>
+      <h5>// MANIFESTO</h5>
+      <p style="max-width:34ch">Improviso tem prazo de validade. Quem cresce de verdade, cresce com sistema — e a Conexinfinity existe para construir o seu.</p>
+    </div>
+    <div>
+      <h5>// MÓDULOS</h5>
+      <a href="servicos.html">Sistema administrativo</a>
+      <a href="servicos.html">Automação</a>
+      <a href="servicos.html">Dashboards & BI</a>
+      <a href="servicos.html">Integrações</a>
+      <a href="servicos.html">IA aplicada</a>
+    </div>
+    <div>
+      <h5>// EMPRESA</h5>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Orçamento</a>
+    </div>
+    <div>
+      <h5>// CONTATO</h5>
+      <a href="mailto:contato@conexinfinity.com">contato@conexinfinity.com</a>
+      <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp direto</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>STATUS: ONLINE · ARACAJU · SE</span>
+    <span id="footerClock">--/--/---- · --:--:--</span>
+    <span>© <span id="year">2026</span> CONEXINFINITY</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
