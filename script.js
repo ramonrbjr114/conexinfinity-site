@@ -1,3 +1,29 @@
+/* ---------- Mobile burger menu (drawer) ---------- */
+document.addEventListener("click", function(e) {
+  // Abre/fecha via botão burger
+  if (e.target.closest("#navBurger")) {
+    e.preventDefault();
+    document.body.classList.toggle("nav-open");
+    return;
+  }
+  // Fecha ao clicar em link do menu
+  if (e.target.closest(".nav a.link") && document.body.classList.contains("nav-open")) {
+    document.body.classList.remove("nav-open");
+    return;
+  }
+  // Fecha ao clicar no backdrop (fora do drawer)
+  if (document.body.classList.contains("nav-open")
+      && !e.target.closest(".nav ul")
+      && !e.target.closest("#navBurger")) {
+    document.body.classList.remove("nav-open");
+  }
+});
+
+// Fecha drawer ao redimensionar pra desktop
+window.addEventListener("resize", function() {
+  if (window.innerWidth > 960) document.body.classList.remove("nav-open");
+});
+
 /* ---------- Theme toggle (dark / light) com event delegation ---------- */
 // Garante o tema inicial (caso o script inline do <head> tenha falhado)
 (function initTheme() {

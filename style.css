@@ -264,6 +264,13 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 /* ---------- Nav actions wrapper (agrupa toggle + CTA) ---------- */
 .nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
 
+/* ---------- Hamburger menu button (mobile only) ---------- */
+.nav-burger{display:none;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--text-2);cursor:pointer;transition:.2s;flex-shrink:0}
+.nav-burger:hover{color:var(--cyan);border-color:var(--cyan);background:rgba(0,229,255,.06)}
+[data-theme="light"] .nav-burger:hover{background:rgba(21,32,191,.08);color:var(--blue);border-color:var(--blue)}
+.nav-burger svg{width:18px;height:18px;display:block;pointer-events:none;transition:transform .3s ease}
+body.nav-open .nav-burger svg{transform:rotate(90deg)}
+
 /* ---------- Theme toggle button ---------- */
 .theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--text-2);cursor:pointer;transition:.2s;flex-shrink:0}
 .theme-toggle:hover{color:var(--cyan);border-color:var(--cyan);background:rgba(0,229,255,.06)}
@@ -568,6 +575,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 /* ---------- Responsive ---------- */
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding-top:130px;min-height:auto}
+  .hud-3d{height:380px}
   .modules{grid-template-columns:1fr 1fr}
   .plans{grid-template-columns:1fr}
   .pain-list{grid-template-columns:1fr}
@@ -579,11 +588,40 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   .contact-grid{grid-template-columns:1fr;gap:40px}
   .metrics-strip{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
-  .nav ul{display:none}
   .section{padding:90px 20px}
   .cta-final{padding:60px 24px}
   .tl-item{grid-template-columns:1fr;gap:8px}
   .pricing-callout{padding:34px}
+
+  /* Mobile nav: hamburger + drawer */
+  .nav-burger{display:inline-flex}
+  .nav ul{
+    position:fixed;top:96px;left:20px;right:20px;
+    flex-direction:column;align-items:stretch;gap:4px;
+    padding:12px;border:1px solid var(--line);border-radius:14px;
+    background:rgba(10,15,28,.92);backdrop-filter:blur(20px);
+    z-index:41;
+    transform:translateY(-12px) scale(.98);
+    opacity:0;visibility:hidden;
+    transition:opacity .25s ease, transform .25s ease, visibility .25s;
+  }
+  [data-theme="light"] .nav ul{background:rgba(244,246,251,.96)}
+  body.nav-open .nav ul{transform:translateY(0) scale(1);opacity:1;visibility:visible}
+  .nav a.link{display:block;padding:14px 18px;font-size:13px;border-radius:8px}
+
+  /* Backdrop atrás do drawer */
+  body.nav-open::before{
+    content:"";position:fixed;inset:0;
+    background:rgba(0,0,0,.5);
+    z-index:39;
+    backdrop-filter:blur(4px);
+    animation:fadeIn .25s ease;
+  }
+  [data-theme="light"] body.nav-open::before{background:rgba(5,8,16,.35)}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  /* CTA na nav um pouco menor no mobile */
+  .nav .cta{padding:8px 12px;font-size:11px}
 }
 @media (max-width:560px){
   .modules{grid-template-columns:1fr}
@@ -591,8 +629,16 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   .blog-card.featured{grid-column:span 1}
   .metrics-strip{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column;gap:8px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
   .statusbar .right span:nth-child(1){display:none}
   .contact-form{padding:28px}
   .contact-form .row{grid-template-columns:1fr}
+  .hud-3d{height:300px}
+  .hero{padding-top:110px}
+  .h1{font-size:clamp(30px,8vw,42px)}
+  .footer-tagline{font-size:18vw}
+  .brand-word{font-size:14px}
+  .nav-inner{padding:8px 10px 8px 14px}
+  .theme-toggle,.nav-burger{width:30px;height:30px}
+  .nav-actions{gap:6px}
 }
